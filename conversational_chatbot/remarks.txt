@@ -1,0 +1,16 @@
+Text generating but formatting is not good 
+
+Improved the formatting using,
+
+Key Changes:
+Using st.empty():
+
+A placeholder (response_placeholder) is created using st.empty().
+This placeholder is dynamically updated with the text chunks as they are generated.
+Appending to Response Text:
+
+Instead of writing each chunk individually, append the text to a cumulative string (response_text).
+Update the placeholder with the cumulative text to ensure smooth and continuous text generation.
+Markdown Formatting:
+
+response_placeholder.markdown(response_text) is used instead of st.write(). Markdown supports more flexible formatting, including new lines and bold text. 
